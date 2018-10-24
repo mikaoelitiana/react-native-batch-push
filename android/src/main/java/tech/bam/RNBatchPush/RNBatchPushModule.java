@@ -21,6 +21,7 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -81,6 +82,34 @@ public class RNBatchPushModule extends ReactContextBaseJavaModule implements Lif
     Batch.User.editor()
       .setAttribute(key, value)
       .save();
+  }
+
+  @ReactMethod
+  public void setAttribute(String key, Boolean value) {
+    Batch.User.editor()
+            .setAttribute(key, value)
+            .save();
+  }
+
+  @ReactMethod
+  public void setAttribute(String key, Integer value) {
+    Batch.User.editor()
+            .setAttribute(key, value)
+            .save();
+  }
+
+  @ReactMethod
+  public void setAttribute(String key, Long value) {
+    Batch.User.editor()
+            .setAttribute(key, value)
+            .save();
+  }
+
+  @ReactMethod
+  public void setAttribute(String key, Double value) {
+    Batch.User.editor()
+            .setAttribute(key, value)
+            .save();
   }
 
   @ReactMethod
