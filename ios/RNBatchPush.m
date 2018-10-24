@@ -47,6 +47,13 @@ RCT_EXPORT_METHOD(setAttribute:(NSString*)key value:(NSString*)value)
     [editor save];
 }
 
+RCT_EXPORT_METHOD(setAttribute:(NSString*)key value:(NSNumber*)value)
+{
+    BatchUserDataEditor *editor = [BatchUser editor];
+    [editor setAttribute:key forKey:value];
+    [editor save];
+}
+
 RCT_EXPORT_METHOD(trackLocation:(NSDictionary*)locationDictionary){
     CLLocationDegrees latitude = [RCTConvert double:locationDictionary[@"latitude"]];
     CLLocationDegrees longitude = [RCTConvert double:locationDictionary[@"longitude"]];
